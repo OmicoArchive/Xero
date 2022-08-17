@@ -37,9 +37,9 @@ buildscript {
 }
 
 plugins {
-    id("com.gradle.enterprise") version "3.10.2"
+    id("com.gradle.enterprise") version "3.10.3"
     id("me.omico.age.settings") version "1.0.0-SNAPSHOT"
-    id("me.omico.gradm") version "2.4.0-SNAPSHOT"
+    id("me.omico.gradm") version "2.5.0-SNAPSHOT"
 }
 
 gradleEnterprise {
