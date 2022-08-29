@@ -10,49 +10,31 @@ import me.omico.age.settings.template
 
 rootProject.name = extra["xero.project.name"] as String
 
-enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
-
 pluginManagement {
+    includeBuild("build-logic")
+    includeBuild("build-logic/initialization")
     repositories {
-        gradlePluginPortal()
-        google()
+        gradlePluginPortal {
+            content {
+                includeGroupByRegex("com.gradle.*")
+            }
+        }
         mavenCentral()
-        mavenLocal()
         maven(url = "https://s01.oss.sonatype.org/content/repositories/snapshots")
     }
 }
 
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-
-buildscript {
-    configurations.all {
-        resolutionStrategy.cacheChangingModulesFor(0, TimeUnit.SECONDS)
-    }
-}
-
 plugins {
-    id("com.gradle.enterprise") version "3.10.3"
+    id("initialization")
+    id("com.gradle.enterprise") version "3.11.1"
     id("me.omico.age.settings") version "1.0.0-SNAPSHOT"
-    id("me.omico.gradm") version "2.5.0-SNAPSHOT"
 }
 
 gradleEnterprise {
     buildScan {
         termsOfServiceUrl = "https://gradle.com/terms-of-service"
         termsOfServiceAgree = "yes"
-        publishAlways()
-    }
-}
-
-gradm {
-    configs {
-        format = true
+        publishAlwaysIf(!gradle.startParameter.isOffline)
     }
 }
 
