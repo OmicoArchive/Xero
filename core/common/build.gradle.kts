@@ -6,7 +6,6 @@ plugins {
 android {
     buildFeatures {
         buildConfig = false
-        compose = true
     }
 }
 
@@ -15,8 +14,9 @@ dependencies {
 }
 
 dependencies {
-    api(androidx.core.splashScreen)
-    api(material)
-    compileOnly(accompanist.systemUiController)
-    compileOnly(androidx.compose.material3)
+    api(androidx.activity.ktx)
+    api(androidx.annotation)
+    api(androidx.core.ktx)
+    api(androidx.lifecycle.runtime.ktx)
+    api(kotlinx.coroutines.android)
 }

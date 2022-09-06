@@ -39,10 +39,12 @@ gradleEnterprise {
 }
 
 include(":app")
+include(":core")
+include(":core:common")
+include(":core:common:resources")
 include(":data")
 include(":ui")
 include(":ui:common")
-include(":ui:common:resources")
 include(":ui:common:theme")
 include(":ui:main")
 

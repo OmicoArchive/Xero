@@ -4,6 +4,9 @@ plugins {
 }
 
 android {
+    defaultConfig {
+        resValue("string", "app_name", extra["xero.project.name"] as String)
+    }
     buildFeatures {
         buildConfig = false
     }

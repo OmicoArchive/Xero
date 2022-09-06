@@ -1,4 +1,4 @@
-package me.omico.xero.ui
+package me.omico.xero.utility
 
 import android.content.Context
 import android.util.Log

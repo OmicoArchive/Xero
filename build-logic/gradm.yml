@@ -122,12 +122,6 @@ dependencies:
         version: ${versions.material}
   mavenCentral:
     com.google.accompanist:
-      accompanist-insets:
-        alias: accompanist.insets
-        version: ${versions.accompanist}
-      accompanist-insets-ui:
-        alias: accompanist.insetsUi
-        version: ${versions.accompanist}
       accompanist-permissions:
         alias: accompanist.permissions
         version: ${versions.accompanist}
