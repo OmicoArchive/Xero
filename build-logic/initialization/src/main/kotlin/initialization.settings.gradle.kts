@@ -3,15 +3,8 @@
 import me.omico.age.dsl.ageSnapshots
 import me.omico.age.dsl.gradmSnapshots
 import me.omico.age.dsl.spotless
-import org.gradle.api.internal.FeaturePreviews
 
-plugins {
-    id("me.omico.age.settings.initialization")
-}
-
-FeaturePreviews.Feature.values()
-    .filter { it.isActive }
-    .forEach { enableFeaturePreview(it.name) }
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
     repositories {
@@ -37,4 +30,8 @@ buildCache {
     local {
         removeUnusedEntriesAfterDays = 1
     }
+}
+
+plugins {
+    id("me.omico.age.settings.initialization")
 }
