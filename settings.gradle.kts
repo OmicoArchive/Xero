@@ -12,6 +12,7 @@ rootProject.name = extra["xero.project.name"] as String
 
 pluginManagement {
     includeBuild("build-logic")
+    includeBuild("build-logic/gradm")
     includeBuild("build-logic/initialization")
     repositories {
         gradlePluginPortal {
@@ -25,6 +26,7 @@ pluginManagement {
 }
 
 plugins {
+    id("gradm")
     id("initialization")
     id("com.gradle.enterprise") version "3.11.1"
     id("me.omico.age.settings") version "1.0.0-SNAPSHOT"

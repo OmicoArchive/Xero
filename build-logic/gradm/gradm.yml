@@ -18,16 +18,16 @@ versions:
   okhttp: "5.0.0-alpha.10"
   plugins:
     age: "1.0.0-SNAPSHOT"
-    android: "7.3.0"
+    android: "7.3.1"
     spotless: "6.11.0"
 
 repositories:
   google:
-    url: https://maven.google.com
+    url: "https://maven.google.com"
   gradlePluginPortal:
-    url: https://plugins.gradle.org/m2
+    url: "https://plugins.gradle.org/m2"
   mavenCentral:
-    url: https://repo1.maven.org/maven2
+    url: "https://repo1.maven.org/maven2"
 
 plugins:
   gradlePluginPortal:
@@ -116,6 +116,10 @@ dependencies:
       navigation-runtime-ktx:
         alias: androidx.navigation.runtime.ktx
         version: ${versions.androidx.navigation}
+    com.android.tools.build:
+      gradle:
+        alias: androidGradlePlugin
+        version: ${versions.plugins.android}
     com.google.android.material:
       material:
         alias: material
@@ -135,3 +139,8 @@ dependencies:
       kotlinx-coroutines-android:
         alias: kotlinx.coroutines.android
         version: ${versions.kotlin.coroutines}
+  noUpdates:
+    me.omico.age:
+      age-dsl:
+        alias: me.omico.age.dsl
+        version: ${versions.plugins.age}

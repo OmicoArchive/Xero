@@ -3,6 +3,7 @@
 rootProject.name = "build-logic"
 
 pluginManagement {
+    includeBuild("gradm")
     includeBuild("initialization")
     repositories {
         mavenCentral()
@@ -11,7 +12,8 @@ pluginManagement {
 }
 
 plugins {
-    id("initialization.gradm")
+    id("gradm")
+    id("initialization")
 }
 
 include(":convention")
