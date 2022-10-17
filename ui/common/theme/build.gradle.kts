@@ -11,7 +11,7 @@ android {
 }
 
 dependencies {
-    api(projects.core.common.resources)
+    api(projects.core.resources)
 }
 
 dependencies {
