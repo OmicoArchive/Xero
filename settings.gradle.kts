@@ -43,10 +43,10 @@ gradleEnterprise {
 include(":app")
 include(":core")
 include(":core:resources")
+include(":core:ui")
+include(":core:ui:theme")
 include(":data")
 include(":ui")
-include(":ui:common")
-include(":ui:common:theme")
 include(":ui:main")
 
 moduleStructure {
