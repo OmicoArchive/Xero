@@ -46,15 +46,15 @@ include(":core:resources")
 include(":core:ui")
 include(":core:ui:theme")
 include(":data")
-include(":ui")
-include(":ui:main")
+include(":feature")
+include(":feature:main")
 
 moduleStructure {
     name = extra["xero.project.name"] as String
     group = extra["xero.project.group"] as String
     sourceType = "kotlin"
-    folder("ui") {
-        template = "android-ui-feature"
+    folder("feature") {
+        template = "android-feature"
         module("template")
     }
 }

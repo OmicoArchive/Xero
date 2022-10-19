@@ -12,6 +12,5 @@ android {
 }
 
 dependencies {
-    api(projects.core)
-    api(projects.ui.main)
+    api(projects.feature.main)
 }

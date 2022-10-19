@@ -26,5 +26,5 @@ android {
 }
 
 dependencies {
-    implementation(projects.ui)
+    implementation(projects.feature)
 }
