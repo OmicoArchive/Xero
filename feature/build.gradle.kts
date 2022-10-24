@@ -1,13 +1,11 @@
 plugins {
-    id("com.android.library")
-    kotlin("android")
+    id("build-logic.android.library")
+    id("build-logic.android.compose")
 }
 
 android {
     buildFeatures {
         androidResources = false
-        buildConfig = false
-        compose = true
     }
 }
 

@@ -1,6 +1,6 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
+    id("build-logic.android.application")
+    id("build-logic.android.compose")
 }
 
 android {
@@ -19,9 +19,6 @@ android {
                 "proguard-rules.pro",
             )
         }
-    }
-    buildFeatures {
-        compose = true
     }
 }
 
