@@ -42,10 +42,10 @@ gradleEnterprise {
 
 include(":app")
 include(":core")
+include(":core:data")
 include(":core:resources")
 include(":core:ui")
 include(":core:ui:theme")
-include(":data")
 include(":feature")
 include(":feature:main")
 
