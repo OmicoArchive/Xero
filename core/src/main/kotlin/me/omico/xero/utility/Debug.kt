@@ -9,16 +9,20 @@ object AppDebug {
     var debug: Boolean = true
 }
 
-fun <T : Any> T?.d(tag: String? = null) {
-    val appDebugTag = tag?.let { "AppDebug: $it" } ?: "AppDebug"
-    if (AppDebug.debug) Log.e(appDebugTag, toString())
+inline fun <reified T : Any> T?.d(tag: String? = null) {
+    if (AppDebug.debug) {
+        val appDebugTag = tag?.let { "AppDebug: $it" } ?: "AppDebug"
+        Log.e(appDebugTag, toString())
+    }
 }
 
-inline val <T : Any> T?.d get() = d()
+inline val <reified T : Any> T?.d
+    get() = d()
 
-fun Context.writeDebugText(name: String, content: String) {
+inline fun <reified T : Any> d(tag: String? = null, block: () -> T?) = block().d(tag)
+
+fun Context.writeDebugText(name: String, content: String) =
     File(filesDir, "debug")
         .also { if (!it.exists()) it.mkdirs() }
         .let { File(it, name) }
         .writeText(content)
-}
