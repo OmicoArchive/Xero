@@ -5,6 +5,8 @@ plugins {
 dependencies {
     api(projects.core.resources)
     api(projects.core.ui)
+    api(projects.core.data.repository)
+    implementation(projects.core.data)
 }
 
 dependencies {

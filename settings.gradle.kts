@@ -42,7 +42,6 @@ gradleEnterprise {
 
 include(":app")
 include(":core")
-include(":core:data")
 include(":core:resources")
 include(":core:ui")
 include(":core:ui:theme")
@@ -53,6 +52,16 @@ moduleStructure {
     name = extra["xero.project.name"] as String
     group = extra["xero.project.group"] as String
     sourceType = "kotlin"
+    folder("core") {
+        template = "android-library"
+        module("data")
+        folder("data") {
+            module("common")
+            module("database")
+            module("datastore")
+            module("repository")
+        }
+    }
     folder("feature") {
         template = "android-feature"
         module("template")
