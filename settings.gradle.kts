@@ -1,13 +1,5 @@
 @file:Suppress("UnstableApiUsage")
 
-import me.omico.age.settings.folder
-import me.omico.age.settings.group
-import me.omico.age.settings.module
-import me.omico.age.settings.moduleStructure
-import me.omico.age.settings.name
-import me.omico.age.settings.sourceType
-import me.omico.age.settings.template
-
 rootProject.name = extra["xero.project.name"] as String
 
 pluginManagement {
