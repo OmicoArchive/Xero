@@ -10,5 +10,5 @@ android {
 }
 
 dependencies {
-    api(projects.feature.main)
+    implementation(projects.feature.main)
 }
