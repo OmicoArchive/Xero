@@ -32,7 +32,7 @@ gradleEnterprise {
     }
 }
 
-include(":app")
+include(":android")
 include(":core")
 include(":core:resources")
 include(":core:ui")
