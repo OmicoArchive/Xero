@@ -1,5 +1,6 @@
 plugins {
     id("build-logic.root-project.base")
+    id("build-logic.git.hooks")
     id("build-logic.spotless")
 }
 
