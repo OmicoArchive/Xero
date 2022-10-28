@@ -1,7 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
 import me.omico.age.dsl.configureAndroidCommon
-import org.gradle.api.JavaVersion
 
 plugins {
     id("com.android.base")

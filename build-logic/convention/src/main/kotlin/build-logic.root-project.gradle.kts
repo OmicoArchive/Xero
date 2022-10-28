@@ -1,5 +1,3 @@
-@file:Suppress("UnstableApiUsage")
-
 plugins {
     id("build-logic.root-project.base")
     id("build-logic.spotless")
