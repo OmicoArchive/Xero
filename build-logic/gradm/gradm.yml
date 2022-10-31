@@ -4,9 +4,9 @@ versions:
     activity: "1.7.0-alpha02"
     annotation: "1.5.0"
     browser: "1.4.0"
-    compose: "1.3.0"
-    compose.compiler: "1.3.2"
-    compose.material3: "1.0.0"
+    compose:
+      bom: "2022.10.00"
+      compiler: "1.3.2"
     core: "1.9.0"
     core.splashScreen: "1.0.0"
     datastore: "1.1.0-dev01"
@@ -52,52 +52,56 @@ dependencies:
       annotation:
         alias: androidx.annotation
         version: ${versions.androidx.annotation}
+    androidx.compose:
+      compose-bom:
+        alias: androidx.compose.bom
+        version: ${versions.androidx.compose.bom}
     androidx.compose.animation:
       animation:
         alias: androidx.compose.animation
-        version: ${versions.androidx.compose}
+        noSpecificVersion: true
     androidx.compose.compiler:
       compiler:
         alias: androidx.compose.compiler
-        version: ${versions.androidx.compose.compiler}
+        noSpecificVersion: true
     androidx.compose.foundation:
       foundation:
         alias: androidx.compose.foundation
-        version: ${versions.androidx.compose}
+        noSpecificVersion: true
     androidx.compose.material:
       material:
         alias: androidx.compose.material
-        version: ${versions.androidx.compose}
+        noSpecificVersion: true
       material-icons-core:
         alias: androidx.compose.material.icons.core
-        version: ${versions.androidx.compose}
+        noSpecificVersion: true
       material-icons-extended:
         alias: androidx.compose.material.icons.extended
-        version: ${versions.androidx.compose}
+        noSpecificVersion: true
     androidx.compose.material3:
       material3:
         alias: androidx.compose.material3
-        version: ${versions.androidx.compose.material3}
+        noSpecificVersion: true
       material3-window-size-class:
         alias: androidx.compose.material3.windowSizeClass
-        version: ${versions.androidx.compose.material3}
+        noSpecificVersion: true
     androidx.compose.runtime:
       runtime:
         alias: androidx.compose.runtime
-        version: ${versions.androidx.compose}
+        noSpecificVersion: true
     androidx.compose.ui:
       ui:
         alias: androidx.compose.ui
-        version: ${versions.androidx.compose}
+        noSpecificVersion: true
       ui-tooling:
         alias: androidx.compose.ui.tooling
-        version: ${versions.androidx.compose}
+        noSpecificVersion: true
       ui-tooling-preview:
         alias: androidx.compose.ui.tooling.preview
-        version: ${versions.androidx.compose}
+        noSpecificVersion: true
       ui-util:
         alias: androidx.compose.ui.util
-        version: ${versions.androidx.compose}
+        noSpecificVersion: true
     androidx.core:
       core-ktx:
         alias: androidx.core.ktx

@@ -8,6 +8,10 @@ dependencies {
 }
 
 dependencies {
+    api(platform(androidx.compose.bom))
+}
+
+dependencies {
     api(accompanist.swipeRefresh)
     api(accompanist.systemUiController)
     api(androidx.activity.compose)
