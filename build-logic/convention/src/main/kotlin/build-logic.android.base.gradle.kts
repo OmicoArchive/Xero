@@ -22,5 +22,5 @@ configureAndroidCommon {
 
 val Project.androidNamespace
     get() = path.replace(":", ".")
-        .let { if (it == ".app") "" else it.replace("-", ".") }
+        .let { if (it == ".android") "" else it.replace("-", ".") }
         .let { extra["xero.project.group"] as String + it }
