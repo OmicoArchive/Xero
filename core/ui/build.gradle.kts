@@ -12,6 +12,7 @@ dependencies {
 }
 
 dependencies {
+    api(accompanist.navigation.material)
     api(accompanist.swipeRefresh)
     api(accompanist.systemUiController)
     api(androidx.activity.compose)

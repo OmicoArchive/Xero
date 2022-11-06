@@ -134,6 +134,9 @@ dependencies:
         version: ${versions.material}
   mavenCentral:
     com.google.accompanist:
+      accompanist-navigation-material:
+        alias: accompanist.navigation.material
+        version: ${versions.accompanist}
       accompanist-permissions:
         alias: accompanist.permissions
         version: ${versions.accompanist}
