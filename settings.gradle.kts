@@ -50,9 +50,11 @@ moduleStructure {
         module("data")
         folder("data") {
             module("common")
-            module("database")
-            module("datastore")
             module("repository")
+            folder("repository") {
+                module("database")
+                module("datastore")
+            }
         }
     }
     folder("feature") {
