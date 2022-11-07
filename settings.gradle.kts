@@ -34,6 +34,7 @@ gradleEnterprise {
 
 include(":android")
 include(":core")
+include(":core:common")
 include(":core:resources")
 include(":core:ui")
 include(":core:ui:theme")
